@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Memories In Motion Transportation Ministry logo">
+  <defs>
+    <clipPath id="mim-badge"><circle cx="120" cy="120" r="104"/></clipPath>
+    <linearGradient id="mim-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FCE9C4"/>
+      <stop offset="0.6" stop-color="#F7C27A"/>
+      <stop offset="1" stop-color="#EE9A4E"/>
+    </linearGradient>
+    <radialGradient id="mim-sun" cx="0.5" cy="0.6" r="0.6">
+      <stop offset="0" stop-color="#FFE7A3"/>
+      <stop offset="0.7" stop-color="#FFC24D"/>
+      <stop offset="1" stop-color="#F39A32"/>
+    </radialGradient>
+    <linearGradient id="mim-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4E7F55"/>
+      <stop offset="1" stop-color="#2D5236"/>
+    </linearGradient>
+    <path id="mim-stone" d="M-4 6 V-2 A4 4 0 0 1 4 -2 V6 Z"/>
+  </defs>
+
+  <!-- outer ring -->
+  <circle cx="120" cy="120" r="118" fill="#14284B"/>
+  <circle cx="120" cy="120" r="110" fill="none" stroke="#C9973F" stroke-width="2.5"/>
+
+  <g clip-path="url(#mim-badge)">
+    <!-- sky -->
+    <rect x="0" y="0" width="240" height="150" fill="url(#mim-sky)"/>
+
+    <!-- sun rays -->
+    <g stroke="#FFF4D6" stroke-width="3" stroke-linecap="round" opacity="0.75">
+      <line x1="120" y1="96" x2="120" y2="40"/>
+      <line x1="100" y1="100" x2="80" y2="50"/>
+      <line x1="140" y1="100" x2="160" y2="50"/>
+      <line x1="85" y1="112" x2="48" y2="76"/>
+      <line x1="155" y1="112" x2="192" y2="76"/>
+      <line x1="76" y1="130" x2="30" y2="112"/>
+      <line x1="164" y1="130" x2="210" y2="112"/>
+    </g>
+    <!-- sun -->
+    <circle cx="120" cy="146" r="40" fill="url(#mim-sun)"/>
+
+    <!-- American flag -->
+    <g transform="translate(166 60)">
+      <rect x="-2" y="0" width="3" height="84" fill="#5A4632"/>
+      <circle cx="-0.5" cy="-1" r="2.6" fill="#C9973F"/>
+      <g>
+        <path d="M1 2 C12 -2 22 6 36 2 V26 C22 30 12 22 1 26 Z" fill="#FFFFFF"/>
+        <path d="M1 2 C12 -2 22 6 36 2 V5.5 C22 9.5 12 1.5 1 5.5 Z" fill="#B22234"/>
+        <path d="M1 9.5 C12 5.5 22 13.5 36 9.5 V13 C22 17 12 9 1 13 Z" fill="#B22234"/>
+        <path d="M1 17 C12 13 22 21 36 17 V20.5 C22 24.5 12 16.5 1 20.5 Z" fill="#B22234"/>
+        <path d="M1 24.5 C12 20.5 22 28.5 36 24.5 V26 C22 30 12 22 1 26 Z" fill="#B22234"/>
+        <path d="M1 2 C6 0.5 11 0.6 16 2 V14 C11 12.6 6 12.5 1 14 Z" fill="#14284B"/>
+        <g fill="#FFFFFF">
+          <circle cx="4.5" cy="5" r="0.9"/><circle cx="8.5" cy="4.6" r="0.9"/><circle cx="12.5" cy="5" r="0.9"/>
+          <circle cx="6.5" cy="8" r="0.9"/><circle cx="10.5" cy="7.8" r="0.9"/>
+          <circle cx="4.5" cy="11" r="0.9"/><circle cx="8.5" cy="10.6" r="0.9"/><circle cx="12.5" cy="11" r="0.9"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ground / hills -->
+    <path d="M0 150 C40 138 80 144 120 146 C160 148 200 136 240 144 V240 H0 Z" fill="url(#mim-ground)"/>
+    <path d="M0 162 C50 152 90 160 130 158 C175 156 205 150 240 156 V240 H0 Z" fill="#3B6A45" opacity="0.55"/>
+
+    <!-- veteran cemetery markers -->
+    <g fill="#FFFFFF" stroke="#C9CFD6" stroke-width="0.6">
+      <use href="#mim-stone" x="30" y="150"/>
+      <use href="#mim-stone" x="44" y="148"/>
+      <use href="#mim-stone" x="58" y="147"/>
+      <use href="#mim-stone" x="72" y="147"/>
+      <use href="#mim-stone" x="24" y="160"/>
+      <use href="#mim-stone" x="186" y="146"/>
+      <use href="#mim-stone" x="200" y="147"/>
+      <use href="#mim-stone" x="214" y="148"/>
+      <use href="#mim-stone" x="192" y="157"/>
+      <use href="#mim-stone" x="208" y="158"/>
+    </g>
+
+    <!-- winding road forming a heart -->
+    <path id="mim-road" d="M120 236 C112 214 70 206 58 186 C46 166 62 150 82 152 C100 154 114 166 120 178 C126 166 140 154 158 152 C178 150 194 166 182 186 C170 206 128 214 120 236"
+          fill="none" stroke="#2A2D36" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M120 236 C112 214 70 206 58 186 C46 166 62 150 82 152 C100 154 114 166 120 178 C126 166 140 154 158 152 C178 150 194 166 182 186 C170 206 128 214 120 236"
+          fill="none" stroke="#F5C451" stroke-width="1.6" stroke-dasharray="5 4" stroke-linecap="round"/>
+
+    <!-- transportation van on the road -->
+    <g transform="translate(60 158) rotate(-38)">
+      <path d="M-13 -4 H5 C8 -4 10 -2 12 1 L14 3 V7 H-13 Z" fill="#FFFFFF" stroke="#14284B" stroke-width="1"/>
+      <rect x="-11" y="-2" width="5" height="3.4" rx="0.6" fill="#14284B"/>
+      <rect x="-4.5" y="-2" width="5" height="3.4" rx="0.6" fill="#14284B"/>
+      <path d="M2 -2 H5.5 C7 -2 8.4 -0.6 9.4 1.4 H2 Z" fill="#14284B"/>
+      <rect x="-13" y="3.2" width="27" height="1.2" fill="#B22234"/>
+      <circle cx="-7.5" cy="7.5" r="2.4" fill="#14284B"/>
+      <circle cx="8" cy="7.5" r="2.4" fill="#14284B"/>
+    </g>
+  </g>
+</svg>
