@@ -27,7 +27,7 @@
   --shadow-sm: 0 2px 10px rgba(20, 40, 75, .06);
   --shadow: 0 14px 40px rgba(20, 40, 75, .10);
   --shadow-lg: 0 24px 60px rgba(20, 40, 75, .18);
-  --header-h: 84px;
+  --header-h: 96px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -127,12 +127,17 @@ p { margin: 0 0 1em; }
   display: flex; align-items: center; justify-content: space-between; gap: 1.2rem;
 }
 
-.brand { display: flex; align-items: center; gap: .7rem; flex-shrink: 0; }
-.brand__mark { width: 54px; height: 54px; flex-shrink: 0; border-radius: 50%; object-fit: contain; }
+.brand { display: flex; align-items: center; gap: .85rem; flex-shrink: 0; }
+.brand__mark {
+  width: 74px; height: 74px; flex-shrink: 0; border-radius: 50%; object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(20, 40, 75, .14)); transition: transform .25s ease;
+}
+.brand:hover .brand__mark { transform: scale(1.04); }
 .brand__text { display: flex; flex-direction: column; line-height: 1.05; white-space: nowrap; }
-.brand__name { font-family: var(--font-head); font-weight: 700; font-size: 1.28rem; color: var(--navy); }
-.brand__sub { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-600); font-weight: 700; margin-top: .28rem; }
-.brand--light .brand__name { color: var(--white); }
+.brand__name { font-family: var(--font-head); font-weight: 700; font-size: 1.32rem; color: var(--navy); }
+.brand__sub { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-600); font-weight: 700; margin-top: .28rem; }
+.brand--light .brand__mark { width: 84px; height: 84px; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .35)); }
+.brand--light .brand__name { color: var(--white); font-size: 1.4rem; }
 .brand--light .brand__sub { color: var(--gold); }
 
 .nav {
@@ -457,7 +462,10 @@ p { margin: 0 0 1em; }
 }
 .banner__inner { display: flex; align-items: center; gap: 2rem; justify-content: space-between; }
 .banner__inner > div { flex: 1; }
-.banner__logo { width: 96px; height: 96px; filter: drop-shadow(0 8px 18px rgba(20,40,75,.25)); }
+.banner__logo {
+  width: 124px; height: 124px; border-radius: 50%; object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(20,40,75,.28));
+}
 .banner__quote { font-family: var(--font-head); font-size: clamp(1.35rem, 2.4vw, 1.9rem); color: var(--navy); margin: 0; line-height: 1.35; font-weight: 600; }
 .banner__quote em { font-weight: 500; color: var(--navy-700); }
 .banner .btn--gold { background: var(--navy); color: var(--white); box-shadow: var(--shadow); }
@@ -556,9 +564,9 @@ p { margin: 0 0 1em; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1280px) {
   .header__inner { gap: .75rem; }
-  .brand__mark { width: 46px; height: 46px; }
-  .brand__name { font-size: 1.15rem; }
-  .brand__sub { font-size: .58rem; letter-spacing: .16em; }
+  .brand__mark { width: 64px; height: 64px; }
+  .brand__name { font-size: 1.18rem; }
+  .brand__sub { font-size: .6rem; letter-spacing: .16em; }
   .nav__link { padding: .45rem .45rem; font-size: .88rem; }
   .nav__cta { padding: .65rem 1.05rem; font-size: .88rem; }
 }
@@ -567,8 +575,9 @@ p { margin: 0 0 1em; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 1024px) {
-  :root { --header-h: 74px; }
+  :root { --header-h: 86px; }
   .topbar__list:last-child { display: none; }
+  .brand__mark { width: 64px; height: 64px; }
   .nav-toggle { display: grid; }
   .nav {
     position: fixed; inset: calc(var(--header-h)) 0 auto 0; background: var(--white);
@@ -598,9 +607,9 @@ p { margin: 0 0 1em; }
 @media (max-width: 600px) {
   body { font-size: 1rem; }
   .topbar { display: none; }
-  .brand__mark { width: 44px; height: 44px; }
-  .brand__name { font-size: 1.08rem; }
-  .brand__sub { font-size: .56rem; letter-spacing: .14em; }
+  .brand__mark { width: 56px; height: 56px; }
+  .brand__name { font-size: 1.12rem; }
+  .brand__sub { font-size: .58rem; letter-spacing: .14em; }
   .hero__content { padding: 70px 0 100px; }
   .hero__overlay { background: linear-gradient(180deg, rgba(14,29,56,.75), rgba(14,29,56,.88)); }
   .hero__actions .btn, .page-hero__actions .btn { width: 100%; }
