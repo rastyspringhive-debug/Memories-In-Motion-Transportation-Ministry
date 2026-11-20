@@ -128,7 +128,7 @@ p { margin: 0 0 1em; }
 }
 
 .brand { display: flex; align-items: center; gap: .7rem; flex-shrink: 0; }
-.brand__mark { width: 54px; height: 54px; flex-shrink: 0; }
+.brand__mark { width: 54px; height: 54px; flex-shrink: 0; border-radius: 50%; object-fit: contain; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.05; white-space: nowrap; }
 .brand__name { font-family: var(--font-head); font-weight: 700; font-size: 1.28rem; color: var(--navy); }
 .brand__sub { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-600); font-weight: 700; margin-top: .28rem; }
@@ -351,6 +351,40 @@ p { margin: 0 0 1em; }
   color: var(--navy); padding-top: .9rem; border-top: 1px dashed var(--line);
 }
 
+/* ---------- Official Pricing Grid (from MIMPricing) ---------- */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.4rem; }
+.pricing-card {
+  background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--navy);
+  border-radius: var(--radius-lg); padding: 2.2rem 1.8rem; box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease;
+}
+.pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.pricing-card--featured {
+  border-top-color: var(--burgundy); background: linear-gradient(180deg, var(--burgundy-50) 0%, var(--white) 100%);
+}
+.pricing-card--assisted {
+  border-top-color: var(--gold-600); background: linear-gradient(180deg, #FDF9F0 0%, var(--white) 100%);
+}
+.pricing-card__badge {
+  display: inline-block; font-size: .78rem; text-transform: uppercase; font-weight: 700; letter-spacing: .1em;
+  padding: .3rem .75rem; border-radius: 20px; background: var(--navy-50); color: var(--navy); margin-bottom: .8rem;
+  align-self: flex-start;
+}
+.pricing-card--featured .pricing-card__badge { background: var(--burgundy); color: var(--white); }
+.pricing-card--assisted .pricing-card__badge { background: var(--gold); color: var(--navy-700); }
+.pricing-card__price {
+  font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; color: var(--navy);
+  line-height: 1.1; margin-bottom: .4rem;
+}
+.pricing-card--featured .pricing-card__price { color: var(--burgundy); }
+.pricing-card__unit { font-size: .95rem; font-family: var(--font-sans); font-weight: 500; color: var(--muted); }
+.pricing-card h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+.pricing-card p { color: var(--muted); font-size: .96rem; line-height: 1.55; margin-bottom: 1.1rem; }
+.pricing-card__features { list-style: none; padding: 0; margin: 0 0 1.4rem; display: grid; gap: .55rem; font-size: .94rem; color: var(--ink); }
+.pricing-card__features li { display: flex; align-items: flex-start; gap: .6rem; }
+.pricing-card__features .fi { color: var(--gold-600); margin-top: .15rem; flex-shrink: 0; }
+.pricing-card__footer { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line); }
+
 .voluntary-notice {
   background: var(--cream); border: 1px solid var(--line); border-left: 5px solid var(--gold);
   border-radius: var(--radius-lg); padding: 2.2rem 2.4rem;
@@ -529,7 +563,7 @@ p { margin: 0 0 1em; }
   .nav__cta { padding: .65rem 1.05rem; font-size: .88rem; }
 }
 @media (max-width: 1100px) {
-  .cards, .cards--3, .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards, .cards--3, .schedule-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 1024px) {
@@ -570,7 +604,7 @@ p { margin: 0 0 1em; }
   .hero__content { padding: 70px 0 100px; }
   .hero__overlay { background: linear-gradient(180deg, rgba(14,29,56,.75), rgba(14,29,56,.88)); }
   .hero__actions .btn, .page-hero__actions .btn { width: 100%; }
-  .strip__grid, .cards, .cards--3, .schedule-grid, .form__row, .footer__grid { grid-template-columns: 1fr; }
+  .strip__grid, .cards, .cards--3, .schedule-grid, .pricing-grid, .form__row, .footer__grid { grid-template-columns: 1fr; }
   .strip__item { border-right: 0 !important; border-bottom: 1px solid var(--line); }
   .strip__item:last-child { border-bottom: 0; }
   .form, .no-cost__card, .voluntary-notice { padding: 1.6rem; }
