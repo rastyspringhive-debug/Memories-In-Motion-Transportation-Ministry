@@ -179,9 +179,10 @@ p { margin: 0 0 1em; }
     linear-gradient(0deg, rgba(14,29,56,.55), rgba(14,29,56,0) 40%);
 }
 .hero__content { position: relative; padding: 90px 0 110px; }
-.hero__title { color: var(--white); font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 700; margin-bottom: 1.2rem; }
+.hero__title { color: var(--white); font-size: clamp(2.15rem, 4.2vw, 3.45rem); font-weight: 700; max-width: 780px; line-height: 1.15; margin-bottom: 1.2rem; }
 .hero__title em { color: #F4C978; font-style: italic; font-weight: 500; }
-.hero__lead { font-size: clamp(1.1rem, 1.6vw, 1.3rem); max-width: 580px; color: #E7EBF2; margin-bottom: 2rem; }
+.hero__lead { font-size: clamp(1.12rem, 1.6vw, 1.35rem); max-width: 660px; color: #E7EBF2; margin-bottom: 2rem; line-height: 1.55; }
+.hero__lead strong { color: #F4C978; font-family: var(--font-head); font-style: italic; font-weight: 600; display: inline-block; margin-top: .35rem; }
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.6rem; }
 .hero__badges { display: flex; gap: 1.6rem; flex-wrap: wrap; font-weight: 600; color: #E7EBF2; }
 .hero__badges li { display: flex; align-items: center; gap: .5rem; }
